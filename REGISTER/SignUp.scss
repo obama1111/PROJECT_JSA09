@@ -1,7 +1,7 @@
 *{
     margin: 0;
 }
-#login_div{
+#register_div{
     width: 25em;
     height: 20em;
     background-color: transparent;
@@ -11,11 +11,12 @@
     align-items: center;
     margin: 10em 0 0 37em; 
     border-radius: 1em;
-    border-radius: 1em;
     border: 1px solid;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+
+
 };
-#login-form{
+#register-form{
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -34,6 +35,12 @@
 
     };
 
+    #confirm-password{
+        width: 25em;
+        height: 2em;
+        border-radius: 0.5em
+    };
+
     #btn_submit{
         width: 25em;
         height: 4em;
@@ -45,4 +52,3 @@
         transition: 1s;
     }
 }
-

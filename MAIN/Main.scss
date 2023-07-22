@@ -97,3 +97,24 @@ select {
     }
 
 }
+
+#search_div{
+    display: flex;
+    width: 30em;
+    height: 3em;
+    background-color: bisque;
+
+    >#btn{
+        width: 3em;
+        height: 3em;
+        background-color: white;
+        border-radius: 3em;
+        &:focus{
+            border-color: yellow;  
+        }
+        
+    } 
+}
+
+
+

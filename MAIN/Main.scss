@@ -219,27 +219,43 @@ select {
 // SlideShow
 .slideshow-container {
   display: flex;
-  justify-content: center;
   position: relative;
-  width: 100%;
   height: 400px;
   overflow: hidden;
 }
 
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
+.slideshow-features {
+  display: flex;
+  flex-direction: column;
 }
 
-.slide{
-  width: 75%;
-  height: 300px;
-  object-fit: cover;
+.slideshow-features > button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: black;
+  width: 200%;
+  border: 0;
+  padding: 20px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.slideshow-features > button:hover {
+  background-color: #454545;
+}
+
+.slide {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
 }
 
 .active {
   opacity: 1;
 }
+

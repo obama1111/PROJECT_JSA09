@@ -15,13 +15,21 @@ document.addEventListener("DOMContentLoaded", function () {
   
       // Kiểm tra username và password có khớp với thông tin đăng ký hay không
       if (username !== registeredUsername || password !== registeredPassword) {
-        alert("Thông tin đăng nhập không chính xác");
+        const destroy = document.getElementById("login-form");
+        destroy.innerHTML = "";
+        const createH1 = document.getElementById("text_success");
+        createH1.insertAdjacentHTML("afterbegin","<h2>Tài khoản không đúng</h2>");
+        createH1.style.color = "Red";
         return;
       }
   
       // Thông báo đăng nhập thành công và lưu thông tin đăng nhập vào Local Storage
       localStorage.setItem("isLogin", true);
-      alert("Đăng nhập thành công");
+      const destroy = document.getElementById("login-form");
+      destroy.innerHTML = "";
+      const createH1 = document.getElementById("text_success");
+      createH1.insertAdjacentHTML("afterbegin","<h2>Đăng nhập thành công</h2>");
+      createH1.style.color = "Green";
       window.location.href = "/MAIN/Main.html";
     });
   });

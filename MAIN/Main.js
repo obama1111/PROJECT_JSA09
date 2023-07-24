@@ -1,5 +1,5 @@
 // Slideshow
-const slides = document.querySelectorAll('.slide');
+const slides = document.getElementsByClassName("slide");
 let currentSlide = 0;
 
 function showSlide() {
@@ -16,5 +16,10 @@ function nextSlide() {
     slides.length;
     showSlide();
 }
+setInterval(nextSlide ,3000);
 
-setInterval(nextSlide , 5000);
+
+// const test = document.getElementById("test")
+// test.addEventListener("click", () =>{
+//     test.style.backgroundColor = "red"
+// })

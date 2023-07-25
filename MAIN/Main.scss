@@ -238,13 +238,16 @@ select {
 #prevButton{
   z-index: 1;
   height: 20em;
+  width: 4.5em;
 }
 
 #nextButton{
   z-index: 1;
   height: 20em;
-
+  width: 4.5em;
+  margin-left: 100px;
 }
+
 #wap-button{
   display: flex;
 }
@@ -253,3 +256,6 @@ select {
   opacity: 1;
 }
 
+.slideshow-father{
+  display: flex;
+}

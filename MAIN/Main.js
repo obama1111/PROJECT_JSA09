@@ -16,10 +16,10 @@ function nextSlide() {
     slides.length;
     showSlide();
 }
-setInterval(nextSlide ,3000);
+// setInterval(nextSlide ,5000);
 
-
-// const test = document.getElementById("test")
-// test.addEventListener("click", () =>{
-//     test.style.backgroundColor = "red"
-// })
+const nextbtn = document.getElementById("nextButton");
+nextbtn.addEventListener("click", () => {
+    nextSlide()
+    // setInterval(nextSlide ,5000);
+})

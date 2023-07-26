@@ -51,3 +51,9 @@ const prevBtn = document.getElementById("prevButton");
 prevBtn.addEventListener("click", prevSlide);
 
 showSlide();
+
+
+const testmovie3 = document.getElementById("movie3")
+testmovie3.addEventListener("click", () => {
+    window.location.href="https://hhpanda.com/phim-jujutsu-kaisen-0-chu-thuat-hoi-chien-2022/3743.html"
+})

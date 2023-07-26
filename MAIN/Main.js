@@ -16,7 +16,16 @@ function nextSlide() {
     slides.length;
     showSlide();
 }
-// setInterval(nextSlide ,5000);
+
+// function prevSlide() {
+//     currentSlide--;
+//     if (currentSlide < 0) {
+//         currentSlide = slides.length - 1;
+//     }
+//     showSlide();
+// }
+
+setInterval(nextSlide ,5000);
 
 const nextbtn = document.getElementById("nextButton");
 nextbtn.addEventListener("click", () => {

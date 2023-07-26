@@ -85,7 +85,7 @@ select {
 }
 // NAV-BAR
 .nav-item{
-    transition: 0.3s;
+    transition: 0.5s;
 
     &:hover{
         background-color: black;
@@ -96,6 +96,16 @@ select {
     }
 
 }
+
+.nav-tabs {
+  text-decoration: none;
+  color: black
+}
+
+.navbar-nav {
+  gap: 1.4em;
+}
+
 //gap
 #gap_deck{
   display: flex;
@@ -275,6 +285,7 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  font-family: "Gill Sans", sans-serif;
 
 
   > #box1 {

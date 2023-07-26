@@ -23,3 +23,9 @@ nextbtn.addEventListener("click", () => {
     nextSlide()
     // setInterval(nextSlide ,5000);
 })
+
+const themeBG = document.getElementById("theme-icon")
+themeBG.addEventListener("click", () => {
+    const body = document.getElementById("body")
+    body.style.backgroundColor = "black"
+})

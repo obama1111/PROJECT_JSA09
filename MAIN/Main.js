@@ -17,13 +17,11 @@ function nextSlide() {
     showSlide();
 }
 
-// function prevSlide() {
-//     currentSlide--;
-//     if (currentSlide < 0) {
-//         currentSlide = slides.length - 1;
-//     }
-//     showSlide();
-// }
+function prevSlide() {
+    hideSlide();
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide();
+}
 
 setInterval(nextSlide ,5000);
 
@@ -41,3 +39,15 @@ themeBG.addEventListener("click", () => {
     text_box.style.color = "#FFFFFF"
     
 })
+// const nextbtn = document.getElementById("nextButton");
+// nextbtn.addEventListener("click", () => {
+//     nextSlide()
+// })
+
+const nextBtn = document.getElementById("nextButton");
+nextBtn.addEventListener("click", nextSlide);
+
+const prevBtn = document.getElementById("prevButton");
+prevBtn.addEventListener("click", prevSlide);
+
+showSlide();

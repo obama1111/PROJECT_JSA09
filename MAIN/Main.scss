@@ -273,22 +273,32 @@ select {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+
   > #box1 {
     width: 20em;
     height: 8em;
-    background-color: red;
+    background-color: #9370DB;
+    color: white;
   }
+
   > #box2 {
     width: 20em;
     height: 8em;
-    background-color: blue;
+    background-color: #FF4500;
+    color: white;
   }
+
   > #box3 {
     width: 20em;
     height: 8em;
-    background-color: greenyellow;
+    background-color: #4163E1;
+    color: white;
   }
+
+
   margin-left: 2em;
+  margin-right: 2em;
 }
 
 .button-gap {

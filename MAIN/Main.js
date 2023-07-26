@@ -33,8 +33,11 @@ nextbtn.addEventListener("click", () => {
     // setInterval(nextSlide ,5000);
 })
 
-const themeBG = document.getElementById("theme-icon")
+const themeBG = document.getElementById("theme-icon");
 themeBG.addEventListener("click", () => {
     const body = document.getElementById("body")
-    body.style.backgroundColor = "black"
+    body.style.backgroundColor = "#321D18"
+    const text_box = document.getElementById("text_box");
+    text_box.style.color = "#FFFFFF"
+    
 })

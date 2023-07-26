@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
     const confirmPassword = document.getElementById("confirm-password").value;
-
+    
     // Kiểm tra password và confirm password có giống nhau hay không
     if (password !== confirmPassword) {
       const destroy = document.getElementById("register-form");
@@ -18,7 +18,15 @@ document.addEventListener("DOMContentLoaded", function () {
       createH1.insertAdjacentHTML("afterbegin", "<h2>Mật khẩu không khớp</h2>");
       createH1.style.color = "Red";
       createH1.style.fontWeight = "bold";
-      return;
+
+      // back lại khi sai tài khoản, mật khẩu
+      const back = document.getElementById("back_btn");
+      back.style.marginTop = "1em";
+      back.addEventListener("click", () => {
+        window.location.href = "/REGISTER/SignUp.html";
+      });
+      back.insertAdjacentHTML("beforeend", '<button type="button">BACK</button>');
+      return
     }
 
     // Lưu thông tin đăng ký vào Local Storage
@@ -27,10 +35,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const destroy = document.getElementById("register-form")
     destroy.innerHTML = "";
     destroy.style.backgroundColor = "black";
-    const createH1 = document.getElementById("text_success")
-    createH1.insertAdjacentHTML("afterbegin", "<h2>Khởi tạo tài khoản thành công!!</h2>");
-    createH1.style.color = "green";
-    createH1.style.fontWeight = "bold";
 
-  });
+
+    const createH1 = document.getElementById("text_success")
+    createH1.insertAdjacentHTML("afterbegin", "<h3>Khởi tạo tài khoản thành công!!</h3>");
+    createH1.style.color = "green";
+
+    // chuyển sang login khi bấm next
+    const next = document.getElementById("next_btn");
+    next.style.marginTop = "1em";
+    next.addEventListener("click", () => {
+      window.location.href = "/LOGIN/Login.html";
+    });
+    next.insertAdjacentHTML("beforeend", '<button type="button">NEXT</button>');
+  })
 });

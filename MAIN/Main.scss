@@ -239,16 +239,25 @@ select {
   z-index: 1;
   height: 4em;
   width: 4em;
-  opacity: 0.5;
   border-radius: 3em;
+  background-color: transparent;
+  transition: 1s;
+  &:hover{
+    font-size: 1.3em;
+  }
+
 }
 
 #nextButton{
   z-index: 1;
   height: 4em;
   width: 4em;
-  opacity: 0.5;
   border-radius: 3em;
+  background-color: transparent;
+  transition: 1s;
+  &:hover{
+    font-size: 1.3em;
+  }
 }
 
 #wap-button{

@@ -11,6 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script>
+        const isLogin = localStorage.getItem("isLogin");
+
+        if (!isLogin) {
+            // Nếu trang yêu cầu bắt buộc phải đăng nhập thì thông báo và chuyển hướng
+            window.location.href = "/LOGIN/Login.html";
+        }
+    </script>
 </head>
 
 <body>
@@ -85,41 +93,44 @@
     </nav>
 
     <!--SLIDESHOW-->
-        <div id="wap-button">
-            
-            <div class="slideshow-container">
-                <div class="slide">
-                    <img src="https://s199.imacdn.com/vg/2023/07/08/043ae40364182c2d_f7f24c6181230434_11895816888325638118684.jpg" alt="Slide 1">
-                </div>
-                <div class="slide">
-                    <img src="https://s199.imacdn.com/vg/2023/06/16/975c3187879cd936_9d2d78389856f3ea_49565016869191198118684.jpg" alt="Slide 2">
-                </div>
-                <div class="slide">
-                    <img src="https://s199.imacdn.com/vg/2023/07/05/e441efdbb977e68d_186aaf6a3c37e2d3_57373116885655898118684.jpg" alt="Slide 3">
-                </div>
-                <div class="button-gap">
-                    <button id="prevButton">Back</button>
-                    <button id="nextButton">Next</button>
-                </div>
-            </div>
-            
+    <div id="wap-button">
 
-            
-            <div id="div_boxes">
-                <div class="boxes">
-                    <h1>SON NGU</h1>
-                </div>
-                <div class="boxes">
-                    <h1>SON NGU</h1>
-                </div>
-                <div class="boxes">
-                    <h1>SON NGU</h1>
-                </div>
+        <div class="slideshow-container">
+            <div class="slide">
+                <img src="https://s199.imacdn.com/vg/2023/07/08/043ae40364182c2d_f7f24c6181230434_11895816888325638118684.jpg"
+                    alt="Slide 1">
+            </div>
+            <div class="slide">
+                <img src="https://s199.imacdn.com/vg/2023/06/16/975c3187879cd936_9d2d78389856f3ea_49565016869191198118684.jpg"
+                    alt="Slide 2">
+            </div>
+            <div class="slide">
+                <img src="https://s199.imacdn.com/vg/2023/07/05/e441efdbb977e68d_186aaf6a3c37e2d3_57373116885655898118684.jpg"
+                    alt="Slide 3">
+            </div>
+            <div class="button-gap">
+                <button id="prevButton">Back</button>
+                <button id="nextButton">Next</button>
             </div>
         </div>
 
 
-        <script src="./Main.js"></script>
+
+        <div id="div_boxes">
+            <div class="boxes">
+                <h1>SON NGU</h1>
+            </div>
+            <div class="boxes">
+                <h1>SON NGU</h1>
+            </div>
+            <div class="boxes">
+                <h1>SON NGU</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./Main.js"></script>
 </body>
 
 </html>

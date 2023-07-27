@@ -1,7 +1,7 @@
 body{
     background-color: gray;
     font-family: Verdana;
-  }
+}
   
   .register-page {
     width: 500px;
@@ -82,13 +82,23 @@ h2{
   height: 100%;
 }
 
-video {
+video{
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: -1;
 }
 
+#test {
+  width: 5em;
+  height: 5em;
+  background: red;
+  position: relative;
+  animation: mymove 5s infinite;
+  border-radius: 3em;
+}
 
-
-
+@keyframes mymove {
+  from {left: 0em;}
+  to {left: 90em;}
+}

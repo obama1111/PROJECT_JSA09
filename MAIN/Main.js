@@ -35,7 +35,7 @@ const themeBG = document.getElementById("theme-icon");
 themeBG.addEventListener("click", () => {
     const body = document.getElementById("body")
     body.style.backgroundColor = "#321D18"
-    const text_box = document.getElementById("text_box");
+    const text_box = document.getElementsByClassName("nav-tabs");
     text_box.style.color = "#FFFFFF"
     
 })

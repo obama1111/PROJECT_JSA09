@@ -83,10 +83,9 @@ select {
     scroll-behavior: auto !important;
   }
 }
-// NAV-BAR
+//NAV-BAR
 .nav-item{
     transition: 0.5s;
-
     &:hover{
         background-color: black;
 
@@ -99,11 +98,11 @@ select {
 
 .nav-tabs {
   text-decoration: none;
-  color: black
+  color: grey
 }
 
 .navbar-nav {
-  gap: 1.4em;
+  gap: 1.4em;;
 }
 
 //gap
@@ -321,3 +320,4 @@ select {
   width: 100%;
   height: 30em;
 }
+

@@ -2,7 +2,18 @@ body{
     background-color: gray;
     font-family: Verdana;
 }
-  
+ 
+// .video-backround {
+//   position: relative;
+//   width: 100%;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+video{
+  z-index: 0;
+}
+
   .register-page {
     width: 500px;
     padding-top: 70px;
@@ -16,7 +27,6 @@ body{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
-  
   #register-form > input{
       font-family: "Roboto", sans-serif;
       outline: 0;
@@ -69,14 +79,6 @@ h2{
   font-size: 1.2em;
 }
 
-#fullscreenvideo{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0;
-}
-
-
 .background-video {
   width: 100%;
   height: 100%;
@@ -85,20 +87,23 @@ h2{
 video{
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  z-index: 0;
 }
 
 #test {
   width: 5em;
   height: 5em;
-  background: red;
+  background: blueviolet;
   position: relative;
-  animation: mymove 5s infinite;
+  animation: example 5s infinite ;
   border-radius: 3em;
+  margin: 1em;
 }
 
-@keyframes mymove {
-  from {left: 0em;}
-  to {left: 90em;}
+@keyframes example {
+  0%   {background-color:red; left:0em; top:0em;}
+  25%  {background-color:yellow; left:90em; bottom: 30em;}
+  50%  {background-color:blue; left:90em; bottom: 30em;}
+  75%  {background-color:green; left:90em; bottom:30em;}
+  100% {background-color:red; left:90em; botton:30em;}
 }

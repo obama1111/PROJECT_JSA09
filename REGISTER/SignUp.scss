@@ -42,7 +42,8 @@ body{
 
   #register-form > input:focus {
     border: 1px solid black;
-  
+    animation: animated 4s infinite;
+
   }
   
   #register-form > button{
@@ -61,6 +62,8 @@ body{
 
   #register-form button:hover{
     background-color: #454545;
+    animation: animated 4s infinite;
+
   }
 
   #register-form > h1{
@@ -90,3 +93,17 @@ video{
   z-index: 0;
 }
 
+
+@keyframes animated {
+  0% {border-color: black;}
+  25% {border-color: red;}
+  50% {border-color: yellow;}
+  75% {border-color: green;}
+  100% {border-color: blue;}
+
+  0% {color: red;}
+  25% {color: orange;}
+  50% {color: yellow;}
+  75% {color: green;}
+  100% {color: blue;}
+}

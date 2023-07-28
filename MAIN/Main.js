@@ -53,7 +53,19 @@ prevBtn.addEventListener("click", prevSlide);
 showSlide();
 
 
-const testmovie3 = document.getElementById("movie3")
-testmovie3.addEventListener("click", () => {
-    window.location.href="https://hhpanda.com/phim-jujutsu-kaisen-0-chu-thuat-hoi-chien-2022/3743.html"
+const Bannermovie1 = document.getElementById("movie1")
+Bannermovie1.addEventListener("click", () => {
+    // window.location.href="https://phimmoichilld.net/xem/quy-quyet-4-tap-full-pm497"
+    console.log("movie1");
+})
+
+const Bannermovie2 = document.getElementById("movie2")
+Bannermovie2.addEventListener("click", () => {
+    console.log("movie2");
+    // window.location.href="https://phimmoichilld.net/info/doctor-strange-in-the-multiverse-of-madness-2022-pm10159"
+})
+const Bannermovie3 = document.getElementById("movie3")
+Bannermovie3.addEventListener("click", () => {
+    console.log("movie3");
+    // window.location.href="https://phimmoiyyy.net/phim-le/transformers-quai-thu-troi-day"
 })

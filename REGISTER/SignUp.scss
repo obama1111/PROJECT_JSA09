@@ -27,6 +27,14 @@ body{
     text-align: center;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
   }
+
+  input{
+    &:focus {
+      border: 1px solid black;
+      animation: animated 4s infinite;
+    }
+  }
+
   #register-form > input{
       font-family: "Roboto", sans-serif;
       outline: 0;
@@ -61,6 +69,21 @@ body{
 
   #register-form button:hover{
     background-color: #454545;
+    animation: animated 4s infinite;
+  }
+
+  @keyframes animated {
+    0% {border-color: black;}
+    25% {border-color: red;}
+    50% {border-color: yellow;}
+    75% {border-color: green;}
+    100% {border-color: blue;}
+  
+    0% {color: red;}
+    25% {color: orange;}
+    50% {color: yellow;}
+    75% {color: green;}
+    100% {color: blue;}
   }
 
   #register-form > h1{
@@ -89,4 +112,5 @@ video{
   height: 100%;
   z-index: 0;
 }
+
 

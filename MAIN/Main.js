@@ -23,7 +23,7 @@ function prevSlide() {
     showSlide();
 }
 
-setInterval(nextSlide ,5000);
+setInterval(nextSlide ,10000);
 
 const nextbtn = document.getElementById("nextButton");
 nextbtn.addEventListener("click", () => {

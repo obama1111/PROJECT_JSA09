@@ -228,18 +228,18 @@ select {
 // SlideShow
 .slideshow-container {
   display: flex;
-  width: 80%;
+  width: 100%;
   position: relative;
   height: 30em;
   overflow: hidden;
   margin-left: 2em;
 }
 
+
 .slide {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-
   transition: opacity 2s ease-in-out;
   >img{
     width: 100%;
@@ -251,8 +251,11 @@ select {
   z-index: 1;
   height: 4em;
   width: 4em;
+  font-size: 1.5em;
   border-radius: 3em;
+  border: none;
   background-color: transparent;
+  color: white;
   transition: 1s;
   &:hover{
     font-size: 1.3em;
@@ -264,8 +267,11 @@ select {
   z-index: 1;
   height: 4em;
   width: 4em;
+  font-size: 1.5em;
   border-radius: 3em;
+  border: none;
   background-color: transparent;
+  color: white;
   transition: 1s;
   &:hover{
     font-size: 1.3em;

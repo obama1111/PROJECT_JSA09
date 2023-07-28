@@ -150,28 +150,19 @@ select {
   }
 }
 // Mini-icon
-.icon-btn-dropdown{
-  width: auto;
-  height: auto;
-  border: 0.1px solid black;
-  border-radius: 1em;
-  margin: 0;
-  padding: 0;
-  >.icon-img{
-    width: 2em;
-    height: 2em;
-  }
-}
+
 .icon-btn{
   width: auto;
   height: auto;
-  border: 0.1px solid black;
+  border: none;
   border-radius: 1em;
   margin: 0;
   padding: 0;
   >.icon-img{
     width: 2em;
     height: 2em;
+    background-color: #212F3D;
+    border-radius: 1em;
   }
 }
 .dropbtn {
@@ -297,21 +288,21 @@ select {
   > #box1 {
     width: 20em;
     height: 8em;
-    background-color: #0C090A;
+    background-color: #2E86C1;
     color: white;
   }
 
   > #box2 {
     width: 20em;
     height: 8em;
-    background-color: #504A4B;
+    background-color: #154360;
     color: white;
   }
 
   > #box3 {
     width: 20em;
     height: 8em;
-    background-color: #2B3856;
+    background-color: #283747;
     color: white;
   }
 
@@ -337,3 +328,17 @@ select {
   color: #4163E1;
 }
 
+#movie1{
+  width: 70em;
+  height: 30em;
+}
+
+#movie2{
+  width: 70em;
+  height: 30em;
+}
+
+#movie3{
+  width: 70em;
+  height: 30em;
+}

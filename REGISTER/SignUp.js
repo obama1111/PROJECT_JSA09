@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Lấy giá trị của các input
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
+    const email = document.getElementById("email").value
     const confirmPassword = document.getElementById("confirm-password").value;
     
     // Kiểm tra password và confirm password có giống nhau hay không
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Lưu thông tin đăng ký vào Local Storage
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
+    localStorage.setItem("email", email);
     const destroy = document.getElementById("register-form")
     destroy.innerHTML = "";
     destroy.style.backgroundColor = "black";

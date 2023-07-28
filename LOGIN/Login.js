@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Lấy giá trị của các input
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-
+    const email = document.getElementById("email").value;
     // Lấy thông tin đăng ký từ Local Storage
     const registeredUsername = localStorage.getItem("username");
     const registeredPassword = localStorage.getItem("password");
+    const registeredEmail = localStorage.getItem("email")
 
     // Kiểm tra username và password có khớp với thông tin đăng ký hay không
-    if (username !== registeredUsername || password !== registeredPassword) {
+    if (username !== registeredUsername || password !== registeredPassword || email !== registeredEmail) {
       const destroy = document.getElementById("login-form");
       destroy.innerHTML = "";
       const createH1 = document.getElementById("text_success");

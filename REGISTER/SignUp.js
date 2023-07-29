@@ -18,8 +18,22 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth();
-console.log(auth);
+const auth = getAuth(app);
+
+function convertError(code) {
+  switch (code) {    
+    case "auth/weak-password":
+      return "Mật khẩu phải có tối thiểu 6 ký tự"
+      break;
+
+    case "auth/email-already-in-use":
+      return "Email đã tồn tại";
+      break;
+    
+    default:
+      return "Đã có lỗi xảy ra"
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const registerForm = document.getElementById("register-form");
@@ -36,19 +50,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Kiểm tra password và confirm password có giống nhau hay không
     if (password !== confirmPassword) {
-      const destroy = document.getElementById("register-form");
-      destroy.innerHTML = "";
-      const createH1 = document.getElementById("text_success");
-      createH1.insertAdjacentHTML("afterbegin", "<h2>Mật khẩu không khớp</h2>");
-      createH1.style.color = "Red";
-      createH1.style.fontWeight = "bold";
-
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: "Mật khẩu không khớp",
+      });
+      return;
       // back lại khi sai tài khoản, mật khẩu
 
     }
 
     // Firebase signup
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndPassword(auth, email, password, username)
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
@@ -71,18 +84,24 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         next.insertAdjacentHTML("beforeend", '<button type="button">NEXT</button>');
       })
+      .catch((error) => {
+        const errorCode = error.code;
+        console.log(errorCode);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: convertError(errorCode),
+        });
+        // const back = document.getElementById("back_btn");
+        // back.style.marginTop = "1em";
+        // back.addEventListener("click", () => {
+        //   window.location.href = "/REGISTER/SignUp.html";
+        // });
+        // back.insertAdjacentHTML("beforeend", '<button type="button">BACK</button>');
+        // return
+        // ..
+      });
     // ...
   })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const back = document.getElementById("back_btn");
-      back.style.marginTop = "1em";
-      back.addEventListener("click", () => {
-        window.location.href = "/REGISTER/SignUp.html";
-      });
-      back.insertAdjacentHTML("beforeend", '<button type="button">BACK</button>');
-      return
-      // ..
-    });
+
 })

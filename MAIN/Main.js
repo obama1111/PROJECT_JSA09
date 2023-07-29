@@ -23,6 +23,7 @@ function prevSlide() {
     showSlide();
 }
 
+nextSlide();
 setInterval(nextSlide, 5000);
 
 const nextbtn = document.getElementById("nextButton");
@@ -80,20 +81,13 @@ themeBG.addEventListener("click", () => {
 
     showSlide();
 })
-// Click để mở phim trong slide showi
-// const Bannermovie1 = document.getElementById("movie1")
-// Bannermovie1.addEventListener("click", () => {
-//     // window.location.href="https://phimmoichlld.net/xem/quy-quyet-4-tap-full-pm497"
-//     console.log("movie1");
-// })
 
-// const Bannermovie2 = document.getElementById("movie2")
-// Bannermovie2.addEventListener("click", () => {
-//     console.log("movie2");
-//     // window.location.href="https://phimmoichilld.net/info/doctor-strange-in-the-multiverse-of-madness-2022-pm10159"
-// })
-// const Bannermovie3 = document.getElementById("movie3")
-// Bannermovie3.addEventListener("click", () => {
-//     console.log("movie3");
-//     // window.location.href="https://phimmoiyyy.net/phim-le/transformers-quai-thu-troi-day"
-// }
+
+// Click để mở phim trong slide show
+const slideEls = document.getElementsByClassName("slide");
+Array.from(slideEls).forEach(slideEl => {
+    slideEl.addEventListener("click", () => {
+        const movieUrl = slideEl.dataset.movie;
+        window.location.href = movieUrl;
+    })
+});

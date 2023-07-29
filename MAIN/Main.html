@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7   Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    
+
     <script>
         const isLogin = localStorage.getItem("isLogin");
 
@@ -33,40 +33,39 @@
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-tabs"
-                             aria-current="page" href="#">Phim lẻ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-tabs" href="#">Phim bộ</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-tabs dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Thể loại
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-tabs dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Quốc gia
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-tabs" aria-current="page" href="#">Phim lẻ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-tabs" href="#">Phim bộ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-tabs dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Thể loại
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-tabs dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Quốc gia
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
             <div id="gap_deck">
                 <div id="search_div">
@@ -98,24 +97,26 @@
     <div id="wap-button">
 
         <div class="slideshow-container">
-            <div class="slide">
-                <img id="movie1" src="https://i0.wp.com/thecinemafiles.com/wp-content/uploads/2018/01/Insidious-The-Last-Key-Banner.jpg?ssl=1"
+            <div class="slide" data-movie="https://phimmoichilld.net/xem/quy-quyet-4-tap-full-pm497">
+                <img id="movie1"
+                    src="https://i0.wp.com/thecinemafiles.com/wp-content/uploads/2018/01/Insidious-The-Last-Key-Banner.jpg?ssl=1"
                     alt="Slide 1">
             </div>
 
-            <div class="slide">
+            <div class="slide"
+                data-movie="https://phimmoichilld.net/info/doctor-strange-in-the-multiverse-of-madness-2022-pm10159">
                 <img id="movie2" src="https://weliveentertainment.com/wp-content/uploads/2023/05/fast-x-banner.jpg"
                     alt="Slide 2">
             </div>
-            
-            <div class="slide">
-                <img id="movie3" src="https://i.ytimg.com/vi/PChsthTBZx8/maxresdefault.jpg"
-                    alt="Slide 3">
+
+            <div class="slide" data-movie="https://phimmoiyyy.net/phim-le/transformers-quai-thu-troi-day">
+                <img id="movie3" src="https://i.ytimg.com/vi/PChsthTBZx8/maxresdefault.jpg" alt="Slide 3">
             </div>
 
             <div class="button-gap">
-                <button id="prevButton"><b><</b></button>
-                <button id="nextButton"><b>></b></button>
+                <button id="prevButton"><b>
+                        &lt;</b></button>
+                <button id="nextButton"><b>&gt;</b></button>
             </div>
         </div>
 

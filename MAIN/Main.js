@@ -80,10 +80,10 @@ themeBG.addEventListener("click", () => {
 
     showSlide();
 })
-// Click để mở phim trong slide show
+// Click để mở phim trong slide showi
 // const Bannermovie1 = document.getElementById("movie1")
 // Bannermovie1.addEventListener("click", () => {
-//     // window.location.href="https://phimmoichilld.net/xem/quy-quyet-4-tap-full-pm497"
+//     // window.location.href="https://phimmoichlld.net/xem/quy-quyet-4-tap-full-pm497"
 //     console.log("movie1");
 // })
 

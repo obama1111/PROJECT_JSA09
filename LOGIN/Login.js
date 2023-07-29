@@ -1,3 +1,27 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+import { getAuth, signInWithEmailAndPassword  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCGPSJjFq_ZWhq-05QzYL_TsnEQzc9qLYA",
+  authDomain: "project-jsa09.firebaseapp.com",
+  projectId: "project-jsa09",
+  storageBucket: "project-jsa09.appspot.com",
+  messagingSenderId: "216183767954",
+  appId: "1:216183767954:web:be1bcd91d54ae44e77774b",
+  measurementId: "G-JCKRD2ZFME"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+console.log(auth);
+
+
 document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.getElementById("login-form");
 
@@ -40,6 +64,17 @@ document.addEventListener("DOMContentLoaded", function () {
       next.insertAdjacentHTML("beforeend", '<button type="button">Đăng ký</button>');
       return;
     }
+
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
 
     // Thông báo đăng nhập thành công và lưu thông tin đăng nhập vào Local Storage
     localStorage.setItem("isLogin", true);

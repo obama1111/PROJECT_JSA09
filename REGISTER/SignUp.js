@@ -21,15 +21,15 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
 function convertError(code) {
-  switch (code) {    
+  switch (code) {
     case "auth/weak-password":
       return "Mật khẩu phải có tối thiểu 6 ký tự"
       break;
 
     case "auth/email-already-in-use":
-      return "Email đã tồn tại";
+      return "Email đã được sử dụng";
       break;
-    
+
     default:
       return "Đã có lỗi xảy ra"
   }
@@ -65,24 +65,14 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        console.log(user);
-
-        const destroy = document.getElementById("register-form")
-        destroy.innerHTML = "";
-        destroy.style.backgroundColor = "black";
-
-
-        const createH1 = document.getElementById("text_success")
-        createH1.insertAdjacentHTML("afterbegin", "<h3>Khởi tạo tài khoản thành công!!</h3>");
-        createH1.style.color = "green";
-
-        // chuyển sang login khi bấm next
-        const next = document.getElementById("next_btn");
-        next.style.marginTop = "1em";
-        next.addEventListener("click", () => {
-          window.location.href = "/LOGIN/Login.html";
+        Swal.fire({
+          icon: 'success',
+          title: 'Success!!',
+          text: "Đăng Kí thành công",
+        }).then((result) => {
+          window.location.href = "/LOGIN/Login.html"
         });
-        next.insertAdjacentHTML("beforeend", '<button type="button">NEXT</button>');
+
       })
       .catch((error) => {
         const errorCode = error.code;

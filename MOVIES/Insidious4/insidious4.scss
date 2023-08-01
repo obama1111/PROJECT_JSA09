@@ -226,3 +226,20 @@ select {
   background-color: bisque;
 }
 
+// MOVIE-VIDEO
+
+.movie-container {
+  display: flex;
+  gap: 3rem;
+  
+}
+
+#Insidious_4 > video {
+  margin-left: 2rem;
+  width: 57rem
+}
+
+#Insidious_4 > h2 {
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+}

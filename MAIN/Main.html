@@ -11,10 +11,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7   Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-        <style>[x-cloak]{display:none}</style>
-        <!-- Include the Alpine library on your page -->
-        <script src="//unpkg.com/alpinejs" defer></script>
-           
+    <style>
+        [x-cloak] {
+            display: none
+        }
+    </style>
+    <!-- Include the Alpine library on your page -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <script>
         const isLogin = localStorage.getItem("isLogin");
 
@@ -145,12 +149,90 @@
     <!-- MOVIE -->
 
     <div class="movie-container">
-        <h2 id="about-movie" >Phim nhiều lượt xem nhất</h2>
-        
+        <h2 id="about-movie">Phim nhiều lượt xem nhất</h2>
+
         <!-- Danh sách phim -->
         <div>
-            
+            <div class="boxesContainer">
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://artofthemovies.co.uk/cdn/shop/products/IMG_0735_incinemas-219707.jpg?v=1674596999" alt="">
+                            <!-- <h3>Movie one</h3>
+                            <p>Hover to flip</p>
+                            <strong>&#x21bb;</strong> -->
+                        </div>
+                        <div class="back">
+                            <h3>Back Side One</h3>
+                            <p>Content in card one</p>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <img src="https://cdn-amz.woka.io/images/I/91k0c-+8eqL.jpg" alt="">
+                            <!-- <h3>Movie Two</h3>
+                            <p>Hover to flip</p>
+                            <strong>&#x21bb;</strong> -->
+                        </div>
+                        <div class="back">
+                            <h3>Back Side Two</h3>
+                            <p>Content in card two</p>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h3>Movie Three</h3>
+                            <p>Hover to flip</p>
+                            <strong>&#x21bb;</strong>
+                        </div>
+                        <div class="back">
+                            <h3>Back Side Three</h3>
+                            <p>Content in card three</p>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h3>Movie Four</h3>
+                            <p>Hover to flip</p>
+                            <strong>&#x21bb;</strong>
+                        </div>
+                        <div class="back">
+                            <h3>Back Side Four</h3>
+                            <p>Content in card four</p>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cardBox">
+                    <div class="card">
+                        <div class="front">
+                            <h3>Movie five</h3>
+                            <p>Hover to flip</p>
+                            <strong>&#x21bb;</strong>
+                        </div>
+                        <div class="back">
+                            <h3>Back Side five</h3>
+                            <p>Content in card five</p>
+                            <a href="#">watch now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--.boxesContainer-->
 
         </div>
     </div>

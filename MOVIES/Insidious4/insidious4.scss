@@ -239,7 +239,28 @@ select {
   width: 57rem
 }
 
-#Insidious_4 > h2 {
+#Insidious_4 > h3 {
   margin-left: 2rem;
   margin-top: 0.5rem;
+}
+
+
+// DESCRIPTION
+.description-container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+#description-image > img {
+  width: 15rem;
+  margin-left: 2rem;
+}
+
+#description-info {
+  gap: 2rem;
+}
+
+#description-info > p {
+  font-size: 1.2em;
 }

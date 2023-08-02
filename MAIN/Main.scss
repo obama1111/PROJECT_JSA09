@@ -69,6 +69,7 @@ select {
   font: inherit;
 }
 
+
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
@@ -396,6 +397,27 @@ select {
 
 
 // MOVIE // 
+// responsive
+@media only screen and (min-width:76.75em) and (max-width: 87.25em) {
+  .cardBox {
+    font-size: 1em;
+    width: 12em !important;
+    height: 18em !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:20em;
+ 
+    >.card{
+      width: 10em;
+      height: 15em;
+    }
+    >.front{
+      padding: 0;
+    }
+  }
+ 
+}
 
 .cardBox {
   float: left;

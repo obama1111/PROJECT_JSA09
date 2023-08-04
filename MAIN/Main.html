@@ -18,20 +18,11 @@
     </style>
     <!-- Include the Alpine library on your page -->
     <script src="//unpkg.com/alpinejs" defer></script>
-
-    <script>
-        const isLogin = localStorage.getItem("isLogin");
-
-        if (!isLogin) {
-            // Nếu trang yêu cầu bắt buộc phải đăng nhập thì thông báo và chuyển hướng
-            window.location.href = "/LOGIN/Login.html";
-        }
-    </script>
 </head>
 
 <body id="body">
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light ">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="/MAIN/Main.html">
                 <img id="img-logo" src="/IMGS/LOGOTEAM.png" alt="">
@@ -54,22 +45,22 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Thể loại
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-tabs dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Quốc gia
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -131,16 +122,16 @@
 
         <div id="div_boxes">
             <div id="box1">
-                <h2>Một cái gì đó</h2>
-                <p>Random Shits</p>
+                <h2>Phim nổi bật</h2>
+                <p>Những bộ phim hay và nổi bật năm 2023</p>
             </div>
             <div id="box2">
-                <h2>Bảng Xếp Hạng</h2>
-                <p>Phim nhiều lượt xem nhất</p>
+                <h2>Phim lẻ mới nhất</h2>
+                <p>Những bộ phim lẻ mới ra lò</p>
             </div>
             <div id="box3">
-                <h2>Một cái gì đó</h2>
-                <p>Random Shits</p>
+                <h2>Top Phim chiếu rạp</h2>
+                <p>Top các phim chiếu rạp kinh điển </p>
             </div>
         </div>
     </div>
@@ -149,7 +140,7 @@
     <!-- MOVIE -->
     <!-- Phim nhieu luot xem nhat -->
     <div class="movie-container">
-        <h2 class="about-movie">Phim nổi bật</h2>
+        <h2 id="tittle_box1" class="about-movie">Phim nổi bật</h2>
         <!-- Danh sách phim -->
         <div class="boxesContainer">
             <div class="cardBox">
@@ -157,7 +148,7 @@
                     <div class="front">
                         <img src="https://artofthemovies.co.uk/cdn/shop/products/IMG_0735_incinemas-219707.jpg?v=1674596999"
                             alt="">
-                    
+
                     </div>
                     <div class="back">
                         <h3>Back Side One</h3>
@@ -171,7 +162,7 @@
                 <div class="card">
                     <div class="front">
                         <img src="https://cdn-amz.woka.io/images/I/91k0c-+8eqL.jpg" alt="">
-                        
+
                     </div>
                     <div class="back">
                         <h3>Back Side Two</h3>
@@ -228,7 +219,7 @@
 
             <!-- phim lẻ mới nhất-->
             <div class="movie-container">
-                <h2 class="about-movie">Phim lẻ mới nhất</h2>
+                <h2 id="tittle_box2" class="about-movie">Phim lẻ mới nhất</h2>
                 <!-- Danh sách phim -->
                 <div class="boxesContainer">
                     <div class="cardBox">
@@ -247,7 +238,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="cardBox">
                         <div class="card">
                             <div class="front">
@@ -263,7 +254,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="cardBox">
                         <div class="card">
                             <div class="front">
@@ -278,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="cardBox">
                         <div class="card">
                             <div class="front">
@@ -293,7 +284,7 @@
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="cardBox">
                         <div class="card">
                             <div class="front">
@@ -308,15 +299,117 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <!-- Top phim chieu rap -->
+            <div class="movie-container">
+                <h2 id="tittle_box3" class="about-movie">Top phim chiếu rạp</h2>
+                <!-- Danh sách phim -->
+                <div class="boxesContainer">
+                    <div class="cardBox">
+                        <div class="card">
+                            <div class="front">
+                                <img src="https://artofthemovies.co.uk/cdn/shop/products/IMG_0735_incinemas-219707.jpg?v=1674596999"
+                                    alt="">
+                                <!-- <h3>Movie one</h3>
+                                    <p>Hover to flip</p>
+                                    <strong>&#x21bb;</strong> -->
+                            </div>
+                            <div class="back">
+                                <h3>Back Side One</h3>
+                                <p>Content in card one</p>
+                                <a href="#">watch now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardBox">
+                        <div class="card">
+                            <div class="front">
+                                <img src="https://cdn-amz.woka.io/images/I/91k0c-+8eqL.jpg" alt="">
+                                <!-- <h3>Movie Two</h3>
+                                    <p>Hover to flip</p>
+                                    <strong>&#x21bb;</strong> -->
+                            </div>
+                            <div class="back">
+                                <h3>Back Side Two</h3>
+                                <p>Content in card two</p>
+                                <a href="#">watch now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardBox">
+                        <div class="card">
+                            <div class="front">
+                                <h3>Movie Three</h3>
+                                <p>Hover to flip</p>
+                                <strong>&#x21bb;</strong>
+                            </div>
+                            <div class="back">
+                                <h3>Back Side Three</h3>
+                                <p>Content in card three</p>
+                                <a href="#">watch now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardBox">
+                        <div class="card">
+                            <div class="front">
+                                <h3>Movie Four</h3>
+                                <p>Hover to flip</p>
+                                <strong>&#x21bb;</strong>
+                            </div>
+                            <div class="back">
+                                <h3>Back Side Four</h3>
+                                <p>Content in card four</p>
+                                <a href="#">watch now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardBox">
+                        <div class="card">
+                            <div class="front">
+                                <h3>Movie five</h3>
+                                <p>Hover to flip</p>
+                                <strong>&#x21bb;</strong>
+                            </div>
+                            <div class="back">
+                                <h3>Back Side five</h3>
+                                <p>Content in card five</p>
+                                <a href="#">watch now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <!-- footer -->
+    <div id="div_footer">
+        <div id="about">
+            <h3>ABOUT</h3>
+            <p>
+                Welcome to our basic movie website! Powered by JavaScript, HTML, and CSS, discover captivating films across genres. With an intuitive interface, find your favorite movies or explore new ones. Each movie page offers a synopsis, cast details, and user reviews. Enhance your movie-watching experience with our dynamic website. Grab your popcorn and enjoy the magic of cinema!</p>
+            <div id="line"></div>
+            <p>Copyright &copy All Rights Reserved by Bootstap and CodePen </p>
+        </div>
 
+        <div id="CATEGORIES">
+            <h3>CATEGORIES</h3>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+        </div>
 
-
-
-
-
-    
+        <div id="CONTACT">
+            <h3>CONTACT</h3>
+            <div id="texts"></div>
+        </div>
+<a href=""></a>
+    </div>
     <script src="./Main.js"></script>
 </body>
 

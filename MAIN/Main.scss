@@ -94,7 +94,6 @@ select {
   height: 3.5em;
 }
 
-
 .navbar-nav .nav-item .nav-tabs {
   text-decoration: none;
   border-bottom: none;
@@ -142,7 +141,11 @@ select {
     border: none;
     margin: 0.5em 0 1em 0;
     font-size: 17px;
-
+    color: black;
+    &:focus-visible{
+      border-radius: 0;
+      color: black;
+    }
   }
 
   >#search_btn{
@@ -160,6 +163,7 @@ select {
       border: 0.1em solid black;
       transform: rotate(360deg);
       color: black;
+
     }
   }
 }
@@ -306,6 +310,7 @@ select {
     height: 8em;
     background-color: #2E86C1;
     color: white;
+    cursor: pointer;
   }
 
   > #box2 {
@@ -313,6 +318,8 @@ select {
     height: 8em;
     background-color: #154360;
     color: white;
+    cursor: pointer;
+
   }
 
   > #box3 {
@@ -320,7 +327,10 @@ select {
     height: 8em;
     background-color: #283747;
     color: white;
+    cursor: pointer;
+
   }
+
 
 
   margin-left: 2em;
@@ -398,7 +408,7 @@ select {
 
 // MOVIE // 
 // responsive
-@media only screen and (min-width:76.75em) and (max-width: 87.25em) {
+@media only screen and (min-width:76.75em) and (max-width: 85.25em) {
   .cardBox {
     font-size: 1em;
     width: 12em !important;
@@ -412,11 +422,27 @@ select {
       width: 10em;
       height: 15em;
     }
-    >.front{
-      padding: 0;
-    }
   }
- 
+}
+@media only screen and (min-width:86.5em) and (max-width: 90em){
+
+  .cardBox {
+    font-size: 1em;
+    width: 13em !important;
+    height: 17em !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20em; 
+    >.card{
+      width: 10em;
+      height: 15em;
+    }
+    >.card .front .card .back {
+      padding: 0;
+   }
+  }
+  
 }
 
 .cardBox {
@@ -577,8 +603,36 @@ select {
 
 .movie-container{
   width: 100%;
-  height: 90em;
   display: flex;
   flex-direction: column;
+}
+
+#div_footer{
+  background-color: #26272b;
+  width: 100%;
+  height: 20em;
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2em;
+  // align-items: center;
+  h3{
+    color: #F2F3F4;
+  }
+  p{
+    color: #616A6B;
+    text-align: justify;
+  }
+  >#about{
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    width: 40em;
+    >#line{
+      width: 100%;
+      height: 0.1em;
+      background-color: #424949;
+    }
+  }
 }
 

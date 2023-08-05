@@ -134,6 +134,25 @@ clicked3.addEventListener("click", () => {
 // Danh sách thông tin về 3 bộ phim
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // footer
 const contactUS = [
     {

@@ -1,32 +1,40 @@
 .featured-movies {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin-left: 7rem;
   }
   
+.nav-button {
+  display: flex;
+  width: 65rem;
+}
+
   .movie-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
+    overflow: hidden;
+    align-items: flex-start;  
+    border: 1px solid black;
+    width: 65rem;
+    gap: 1.5rem;
   }
   
-  .movie {
+  .movie_item {
     width: 200px;
     padding: 10px;
     border: 1px solid #ccc;
     text-align: center;
   }
   
-  .movie img {
-    width: 100%;
+  .movie_item img {
+    width: 8rem;
     height: auto;
     margin-bottom: 10px;
   }
   
   .navigation {
-    margin-top: 20px;
+    margin-top: 27px;
     text-align: center;
+    margin-left: auto;
   }
   
   .navigation button {

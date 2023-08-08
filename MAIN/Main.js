@@ -131,6 +131,7 @@ clicked3.addEventListener("click", () => {
 })
 
 // MOVIE
+
 // Danh sách thông tin về 3 bộ phim
 
 

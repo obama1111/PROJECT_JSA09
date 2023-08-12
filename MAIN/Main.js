@@ -26,13 +26,8 @@ function prevSlide() {
 nextSlide();
 setInterval(nextSlide, 5000);
 
-const nextbtn = document.getElementById("nextButton");
-nextbtn.addEventListener("click", () => {
-    nextSlide()
-    // setInterval(nextSlide ,5000);
-})
-const nextBtn = document.getElementById("nextButton");
-nextBtn.addEventListener("click", nextSlide);
+const btnNext = document.getElementById("nextButton");
+btnNext.addEventListener("click", nextSlide);
 
 const prevBtn = document.getElementById("prevButton");
 prevBtn.addEventListener("click", prevSlide);
@@ -131,6 +126,89 @@ clicked3.addEventListener("click", () => {
 })
 
 // MOVIE
+// Get the necessary elements from the DOM
+const movieContainer = document.querySelector('.movie-container');
+const previousBtn = document.getElementById('previous-btn');
+const nextBtn = document.getElementById('next-btn');
+
+// Array of movie objects
+const movies = [
+  {
+    title: "Movie 3",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/03/John-Wick-4.jpg",
+    description: "Description of Movie 3",
+  },
+  {
+    title: "Movie 4",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/06/Elemental.jpg",
+    description: "Description of Movie 4",
+  },
+  
+  {
+    title: "Movie 5",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2022/07/hon-ma-khong-dau.jpg",
+    description: "Description of Movie 5",
+  },
+  
+  {
+    title: "Movie 6",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/06/Nguoi-Nhen-Du-Hanh-Vu-Tru-Nhen-2023.jpg",
+    description: "Description of Movie 6",
+  },
+  
+  {
+    title: "Movie 7",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/07/quy-quyet-cua-do-vo-dinh.jpg",
+    description: "Description of Movie 7",
+  },
+  
+  {
+    title: "Movie 8",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/05/Qua-Nhanh-Qua-Nguy-Hiem-10-2023.jpg",
+    description: "Description of Movie 8",
+  },
+  {
+    title: "Movie 9",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/06/Phim-Transformers-7.jpg",
+    description: "Description of Movie 9",
+  },
+  {
+    title: "Movie 10",
+    poster: "https://phimmoiyyy.net/wp-content/uploads/2023/07/Oppenheimer.jpg",
+    description: "Description of Movie 10",
+  },
+];
+
+let currentIndex = 0;
+
+// Function to display the current movie
+function displayMovie() {
+  movieContainer.innerHTML = ""
+ movies.forEach (function (movie) {
+  movieContainer.innerHTML += `
+    <div class="movie_item">
+      <img src="${movie.poster}" alt="${movie.title}">
+      <h3>${movie.description}</h3>
+    </div>
+  `;
+ }) 
+}
+
+// Function to handle the next button click
+function handleNextClick() {
+    movieContainer.scrollLeft += 175
+  }
+  
+  // Function to handle the previous button click
+  function handlePreviousClick() {
+    movieContainer.scrollLeft -= 175
+  }
+  
+  // Add event listeners to the buttons
+  nextBtn.addEventListener('click', handleNextClick);
+  previousBtn.addEventListener('click', handlePreviousClick);
+
+  displayMovie();
 
 // Danh sách thông tin về 3 bộ phim
 

@@ -17,7 +17,8 @@ onAuthStateChanged(auth, (user) => {
 });
 
 if (localStorage.getItem("user")) {
-    window.user = JSON.parse(localStorage.getItem("user"))
+    window.user = JSON.parse(localStorage.getItem("user"));
+    document.getElementById("gmail").innerHTML = `${user.email}`
 }
 
 const LogOut = document.getElementById("LogOut")
@@ -28,13 +29,12 @@ LogOut?.addEventListener("click", () => {
             icon: 'warning',
             title: 'Success!!',
             text: "Đăng xuất thành công",
-          }).then((result) => {
+        }).then((result) => {
             localStorage.removeItem("user")
             window.location.href = "/LOGIN/Login.html"
         });
-       
-      }).catch((error) => {
+
+    }).catch((error) => {
         // An error happened.
-      });
-      
-})
+    });
+});

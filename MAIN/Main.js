@@ -253,7 +253,10 @@ contactUS.forEach(text => {
     `
         <p>${text.name}</p>
         <p>${text.phoneNum}</p>
-        <p>${text.facebook}</p>
+        <a href="${text.facebook}" target=_blank>${text.facebook}</a>
     `
 )
+const text_color = document.getElementById("link_text")
+text_color.style.color = "red"
+
 });

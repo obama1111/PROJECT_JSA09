@@ -52,6 +52,7 @@ function Darktheme() {
 
     const body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = "#212F3D";
+    body.style.color = "white"
     const text_boxes = document.getElementsByClassName("nav-tabs");
     for (const textBox of text_boxes) {
         textBox.style.color = "#FFFFFF";
@@ -79,6 +80,8 @@ function Lighttheme() {
     
     const body = document.getElementsByTagName("body")[0];
     body.style.backgroundColor = "white";
+    body.style.color = "black"
+
     const text_boxes = document.getElementsByClassName("nav-tabs");
     for (const textBox of text_boxes) {
         textBox.style.color = "black";

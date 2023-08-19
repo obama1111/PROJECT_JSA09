@@ -264,3 +264,10 @@ select {
 #description-info > p {
   font-size: 1.2em;
 }
+
+.overflow-scroll {
+  max-width: 650px;
+  max-height: 300px;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}

@@ -200,6 +200,32 @@ function displayMovie() {
  }) 
 }
 
+
+
+
+// Function to display the current movie
+function displayMovie() {
+  movieContainer.innerHTML = ""
+ movies.forEach (function (movie) {
+  movieContainer.innerHTML += `
+    <div class="movie_item">
+      <img src="${movie.poster}" alt="${movie.title}">
+      <h3>${movie.description}</h3>
+    </div>
+  `;
+ }) 
+}
+
+
+
+
+
+
+
+
+
+
+
 // Function to handle the next button click
 function handleNextClick() {
     movieContainer.scrollLeft += 160

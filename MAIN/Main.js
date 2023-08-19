@@ -60,7 +60,7 @@ function Darktheme() {
     themeBG.style.borderRadius = "2em"
     themeBG.src = NewIcon;
     themeBG.alt = "newicon"
-    
+
 
 }
 
@@ -137,7 +137,7 @@ const movies = [
   {
     title: "Movie 3",
     poster: "https://phimmoiyyy.net/wp-content/uploads/2023/03/John-Wick-4.jpg",
-    description: "Description of Movie 3",
+    description: "spiderman",
   },
   {
     title: "Movie 4",
@@ -180,6 +180,11 @@ const movies = [
   },
 ];
 
+movies.forEach(movie => {
+  movie.description = "obama123"
+});
+
+
 let currentIndex = 0;
 
 // Function to display the current movie
@@ -212,25 +217,6 @@ function handleNextClick() {
   displayMovie();
 
 // Danh sách thông tin về 3 bộ phim
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // footer

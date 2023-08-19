@@ -1,3 +1,11 @@
+if (!window.user) {
+  window.location.href = "/LOGIN/Login.html"
+}
+
+
+
+
+
 // Slideshow
 const slides = document.getElementsByClassName("slide");
 let currentSlide = 0;
@@ -189,7 +197,6 @@ movies.forEach(movie => {
 
 
 let currentIndex = 0;
-
 // Function to display the current movie
 function displayMovie() {
   movieContainer.innerHTML = ""
@@ -202,28 +209,6 @@ function displayMovie() {
   `;
  }) 
 }
-
-
-
-
-// Function to display the current movie
-function displayMovie() {
-  movieContainer.innerHTML = ""
- movies.forEach (function (movie) {
-  movieContainer.innerHTML += `
-    <div class="movie_item">
-      <img src="${movie.poster}" alt="${movie.title}">
-      <h3>${movie.description}</h3>
-    </div>
-  `;
- }) 
-}
-
-
-
-
-
-
 
 
 

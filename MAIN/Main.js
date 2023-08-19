@@ -60,6 +60,7 @@ function Darktheme() {
     themeBG.style.borderRadius = "2em"
     themeBG.src = NewIcon;
     themeBG.alt = "newicon"
+    
 
 }
 

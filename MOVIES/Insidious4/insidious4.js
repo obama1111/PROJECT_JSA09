@@ -65,3 +65,29 @@ themeBG.addEventListener("click", () => {
         themeOn = false;
     }
 })
+
+
+// footer
+const contactUS = [
+    {
+        id: "1",
+        name: "Nguyễn Hoàng Sơn",
+        phoneNum: "SĐT: 0123456789",
+        facebook: "https://www.facebook.com/tatsunori.makoto.3"
+    },
+    {
+        id: "2",
+        name: "Hoàng Phúc Sáng",
+        phoneNum: "SĐT: 0123123123",
+        facebook: "https://www.facebook.com/SacChocoBer"
+    },
+]
+contactUS.forEach(text => {
+    document.getElementById("texts").insertAdjacentHTML("afterbegin",
+    `
+        <p>${text.name}</p>
+        <p>${text.phoneNum}</p>
+        <p>${text.facebook}</p>
+    `
+)
+});

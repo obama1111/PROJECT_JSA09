@@ -231,12 +231,12 @@ function displayMovie() {
 
 // Function to handle the next button click
 function handleNextClick() {
-    movieContainer.scrollLeft += 160
+    movieContainer.scrollLeft += 100
   }
   
   // Function to handle the previous button click
   function handlePreviousClick() {
-    movieContainer.scrollLeft -= 160
+    movieContainer.scrollLeft -= 100
   }
   
   // Add event listeners to the buttons

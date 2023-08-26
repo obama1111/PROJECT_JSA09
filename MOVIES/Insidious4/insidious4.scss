@@ -234,9 +234,11 @@ select {
   
 }
 
-#Insidious_4 > video {
+#Insidious_4 > iframe {
   margin-left: 2rem;
+  height: 30rem;
   width: 57rem
+  
 }
 
 #Insidious_4 > h3 {
@@ -272,10 +274,17 @@ select {
   overflow-y: scroll;
 }
 
-
-
-
-
+#Other_movie {
+  // display: flex;
+  // flex-direction: column;
+  #img_rm{
+    width: 10em;
+    height: 5em;
+    // display: flex;
+    
+  }
+  
+}
 
 
 // footer
@@ -289,22 +298,28 @@ select {
   justify-content: space-around;
   padding-top: 2em;
   // align-items: center;
-  h3{
-    color: #F2F3F4;
+  h3 {
+    color: #f2f3f4;
   }
-  p{
-    color: #616A6B;
+  p {
+    color: #616a6b;
     text-align: justify;
   }
-  >#about{
+  > #about {
     // background-color: red;
     display: flex;
     flex-direction: column;
     width: 40em;
-    >#line{
+    > #line {
       width: 100%;
       height: 0.1em;
       background-color: #424949;
     }
+  }
+
+  a {
+    color: red;
+    margin-bottom: 1rem;
+    text-decoration: none;
   }
 }

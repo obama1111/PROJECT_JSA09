@@ -1,3 +1,8 @@
+if (!window.user) {
+    window.location.href = "/LOGIN/Login.html"
+  }
+
+
 const themeBG = document.getElementById("theme-icon");
 const NewIcon = "/IMGS/3.png"
 const LastIcon = "/IMGS/2.png"
@@ -145,8 +150,12 @@ contactUS.forEach(text => {
     `
         <p>${text.name}</p>
         <p>${text.phoneNum}</p>
-        <p>${text.facebook}</p>
+        <a href="${text.facebook}" target=_blank>${text.facebook}</a>
     `
 )
+const text_color = document.getElementById("link_text")
+text_color.style.color = "red"
+
 });
+
 

@@ -148,7 +148,7 @@ const movies = [
   {
     title: "Movie 3",
     poster: "https://phimmoiyyy.net/wp-content/uploads/2023/03/John-Wick-4.jpg",
-    description: "spiderman",
+    description: "John Wick",
   },
   {
     title: "Movie 4",
@@ -190,10 +190,6 @@ const movies = [
     description: "Description of Movie 10",
   },
 ];
-
-movies.forEach(movie => {
-  movie.description = "obama123"
-});
 
 
 let currentIndex = 0;

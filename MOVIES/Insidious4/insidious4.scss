@@ -274,6 +274,21 @@ select {
   overflow-y: scroll;
 }
 
+#Other_movie {
+  display: flex;
+  flex-direction: column;
+}
+
+#related_movies{
+  display: flex;
+}
+
+#img_rm{
+  width: 10em;
+  height: 5em;
+
+}
+
 // footer
 
 #div_footer{
